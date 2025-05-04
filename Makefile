@@ -12,6 +12,7 @@ connectgdb:
 	gdb-multiarch main.elf -ex "target remote localhost:1234" -ex "break _start" -ex "continue" -q
 
 clean:
-	rm -f main.elf
-	rm -f main.bin
-	rm -f .gdb_history
+	rm -rf *.out
+	rm -rf *.elf
+	rm -rf *.bin
+	rm -rf .gdb_history
