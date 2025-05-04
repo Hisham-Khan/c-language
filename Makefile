@@ -14,12 +14,4 @@ connectgdb:
 clean:
 	rm -f main.elf
 	rm -f main.bin
-	rm -f m.s
-	rm -f m.ld
-	rm -f m.o
-	rm -f m.map
-	rm -f m.sym
-	rm -f m.lst
-	rm -f m.hex
-	rm -f m.bin
-	rm -f m.dis
+	rm -f .gdb_history
