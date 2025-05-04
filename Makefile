@@ -2,7 +2,7 @@ machinecode: m.s m.ld
 	riscv64-unknown-elf-gcc -O0 -ggdb -nostdlib -march=rv32i -mabi=ilp32 -Wl,-Tm.ld m.s -o main.elf
 	riscv64-unknown-elf-objcopy -0 binary main.elf main.bin
 
-printbinary:
+printbinary: main.bin
 	xxd -e -c 4 -g 4 main.bin
 
 startqemu:
