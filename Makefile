@@ -6,10 +6,10 @@ printbinary: main.bin
 	xxd -e -c 4 -g 4 main.bin
 
 startqemu: main.elf
-	qemu-system-riscv32 -S -M virt -nographic -bios none -kernel main.elf -gdb tcp::1234
+	qemu-system-riscv32 -S -M virt -nographic -bios none -kernel main.elf -gdb tcp::1111
 
 connectgdb: main.elf
-	gdb-multiarch main.elf -ex "target remote localhost:1234" -ex "break _start" -ex "continue" -q
+	gdb-multiarch main.elf -ex "target remote localhost:1111" -ex "break _start" -ex "continue" -q
 
 clean:
 	rm -rf *.out
